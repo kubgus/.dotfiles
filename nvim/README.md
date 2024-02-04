@@ -18,33 +18,6 @@ My personal NeoVim configuration files.
 - [x] custom theme
 - [x] lualine
 
-# setup
-Run the `setup.sh` script in your home directory.
-
-*or*
-
-Run these commands in order in your home directory:
-
-> ***Note:*** Installing `ripgrep` may work differently in some distros
-
-1. `sudo apt-get install ripgrep`
-2. `git clone --depth 1 https://github.com/kubgus/nvim ~/.config/nvim`
-3. `git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim`
-4. `curl -L https://github.com/neovim/neovim/releases/download/v0.9.5/nvim-linux64.tar.gz > nvim-linux64.tar.gz`
-5. `tar xvzf nvim-linux64.tar.gz`
-6. `rm nvim-linux64.tar.gz`
-7. `sudo mv nvim-linux64 /bin`
-8. `sudo ln -s /bin/nvim-linux64/bin/nvim /bin/nvim`
-9. `nvim ~/.config/nvim`
-
-Ignore runtime errors (press Enter multiple times) and follow these instrustions to correctly load the configuration:
-
-> ***Important:*** This part is required even if installed with `setup.sh`
-
-1. Navigate to `./lua/kubgus` and open files one by one, running `:so` each time (if you get an error, skip the file and return to it after completing the rest)
-2. Run `:PackerSync` anywhere in the environment
-3. Navigate to `./after/plugin` and run the `:so` command in the same fashion as the previous step
-
 # learn vim (and this config)
 
 [ThePrimeagen's guide](https://www.youtube.com/playlist?list=PLm323Lc7iSW_wuxqmKx_xxNtJC_hJbQ7R)
@@ -76,6 +49,14 @@ Can be used in *normal mode*.
 <kbd>b</kbd> - Opposite of <kbd>w</kbd> (previous word)
 
 <kbd>B</kbd> - Opposite of <kbd>W</kbd> (previous word)
+
+
+<kbd>e</kbd> - Move cursor to end of next word
+
+<kbd>E</kbd> - Move cursor to end of next word
+
+
+<kbd>g</kbd><kbd>e</kbd> - Move cursor to end of previous word
 
 
 <kbd>$</kbd> - Move cursor to the end of the line
@@ -187,8 +168,16 @@ Can be used in *normal mode*.
 - Deleting puts the deleted contents into the yank buffer
 - By pressing <kbd>"</kbd><kbd>_</kbd> before this command, it will not write into the yank buffer
 
-<kbd>c</kbd> - Replace
+<kbd>c</kbd> - Change (Replace)
 - Same as <kbd>d</kbd>, but enters insert mode
+
+<kbd>g</kbd> - Go (To)
+- Move cursor
+- Combine with itself to go to a specified line - <kbd>[line]</kbd><kbd>g</kbd><kbd>g</kbd>
+- Other combinations: ([see more](https://vimdoc.sourceforge.net/htmldoc/vimindex.html#g))
+    - <kbd>g</kbd><kbd>d</kbd> - Go to definition
+    - <kbd>g</kbd><kbd>e</kbd> - Go to end of previous word
+    - <kbd>g</kbd><kbd>E</kbd> - Go to end of previous word (incl. punc.)
 
 <kbd>=</kbd> - Correct indentation
 - Combine with itself to correct the current line's indentation
