@@ -31,6 +31,10 @@ default_border pixel 0
 hide_edge_borders both
 
 # draw on screen
-# f9 - start
-# alt + f9 - stop
-exec --no-startup-id gromit-mpx
+# f9:        toggle painting
+# shift-f9:  clear screen
+# ctrl-f9:   toggle visibility
+# alt-f9:    quit gromit-mpx
+# f8:       undo last stroke
+# shift-f8: redo last undone stroke
+exec_always --no-startup-id gromit-mpx
