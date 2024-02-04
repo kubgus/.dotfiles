@@ -7,7 +7,6 @@ sudo apt-get update
 cd ~/.config
 git clone --depth 1 https://github.com/kubgus/.dotfiles
 mv .dotfiles/* .
-rmdir .dotfiles
 ```
 
 > ***Note:*** Make sure these folders don't yet exist!
