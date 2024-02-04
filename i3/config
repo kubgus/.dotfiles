@@ -29,3 +29,8 @@ exec --no-startup-id compton
 gaps inner 4
 default_border pixel 0
 hide_edge_borders both
+
+# draw on screen
+# f9 - start
+# alt + f9 - stop
+exec --no-startup-id gromit-mpx
