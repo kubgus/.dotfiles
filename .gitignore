@@ -1,0 +1,12 @@
+# ignore everythin
+/*
+
+# don't ignore
+!/.gitignore
+!/LICENSE
+!/README.md
+
+!/i3/
+!/nvim/
+!/polybar/
+!/rofi/
