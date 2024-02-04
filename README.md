@@ -47,5 +47,5 @@ sudo apt-get install polybar
 ## setting up rofi
 
 ```bash
-sudo apt-get install rofi
+sudo apt-get install rofi picom
 ```
