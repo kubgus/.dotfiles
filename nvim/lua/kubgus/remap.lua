@@ -9,7 +9,7 @@ vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>po", vim.cmd.Ex)
 
 -- greatest remap ever
-vim.keymap.set("x", "<leader>p", [["_dP]])
+vim.keymap.set("x", "<leader>pp", [["_dP]])
 
 -- Visual move
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
