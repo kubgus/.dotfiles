@@ -61,3 +61,7 @@ vim.keymap.set("n", "<leader>cppn", "i#include <iostream><Enter><Enter>int main(
 
 -- README ease of use
 vim.keymap.set("n", "<leader>mdkb", "i<Enter><kbd></kbd><Esc>5hi")
+
+-- Copilot
+vim.keymap.set("n", "<leader>ce", ":Copilot enable<CR>")
+vim.keymap.set("n", "<leader>cd", ":Copilot disable<CR>")
