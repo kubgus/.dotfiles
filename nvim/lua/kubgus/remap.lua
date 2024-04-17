@@ -45,6 +45,7 @@ vim.keymap.set("n", "<leader>k", ":tabnext -<CR>")
 vim.keymap.set("n", "<leader>h", ":tabnext -<CR>")
 vim.keymap.set("n", "<leader>l", ":tabnext +<CR>")
 vim.keymap.set("n", "<leader>n", ":tabnew<CR>")
+vim.keymap.set("n", "<leader>e", ":tabclose<CR>")
 
 -- Terminal
 vim.keymap.set("n", "<leader>t", ":ToggleTerm<CR>")
