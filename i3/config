@@ -12,18 +12,19 @@ font pango:DejaVu Sans Mono 11
 exec --no-startup-id xrandr --auto
 exec --no-startup-id xrandr --output $pm --primary --output $sm --right-of $pm
 
+# some fancy desktop shit
 exec --no-startup-id dex --autostart --environment i3
 
-# xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
-exec --no-startup-id xss-lock --transfer-sleep-lock "i3lock -i /usr/share/backgrounds/kali/kali-prompt-16x10.png"
-
+# network applet
 exec --no-startup-id nm-applet
 
+# launch polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
-exec_always --no-startup-id /usr/bin/feh --bg-scale '/usr/share/backgrounds/kali/kali-prompt-16x9.jpg'
-exec --no-startup-id compton
+# wallpaper
+exec_always --no-startup-id feh --bg-scale '/usr/share/backgrounds/kali/kali-prompt-16x9.jpg'
 
+# window styles
 gaps inner 4
 default_border pixel 0
 hide_edge_borders both

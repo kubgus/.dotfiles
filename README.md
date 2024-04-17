@@ -14,7 +14,7 @@ mv .dotfiles/* .
 ## setting up i3
 
 ```bash
-sudo apt-get install i3 i3lock x11-xserver-utils dex network-manager alacritty feh gromit-mpx
+sudo apt-get install i3 dex network-manager nm-applet alacritty feh gromit-mpx
 ```
 
 > ***Note:*** Install `polybar` and `rofi` separately!
@@ -47,5 +47,5 @@ sudo apt-get install polybar
 ## setting up rofi
 
 ```bash
-sudo apt-get install rofi picom
+sudo apt-get install rofi
 ```
