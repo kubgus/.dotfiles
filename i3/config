@@ -22,7 +22,7 @@ exec --no-startup-id nm-applet
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # wallpaper
-exec_always --no-startup-id feh --bg-scale '/usr/share/backgrounds/kali/kali-prompt-16x9.jpg'
+exec_always --no-startup-id feh --bg-fill '/usr/share/backgrounds/kali/kali-red-sticker-16x9.jpg'
 
 # window styles
 gaps inner 4
