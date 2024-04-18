@@ -4,7 +4,7 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
 	-- Packer can manage itself
 	use('wbthomason/packer.nvim')
-	
+
 	-- Telescope (fuzzy-finder)
 	use {
 		'nvim-telescope/telescope.nvim', tag = '0.1.5',
@@ -64,4 +64,8 @@ return require('packer').startup(function(use)
 
     -- AI Copilot
     use("github/copilot.vim")
+
+    -- Error handling
+    use("folke/trouble.nvim")
+
 end)
