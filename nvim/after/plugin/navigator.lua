@@ -24,11 +24,11 @@ require("navigator").setup({
         diagnostic_hint = '',
 
         -- Diagnostics (floating window)
-        diagnostic_head_severity_1 = '󰚑',
-        diagnostic_head_severity_2 = '󰰲',
-        diagnostic_head_severity_3 = '󰂚',
-        diagnostic_head_description = '', -- suffix for severities
-        diagnostic_virtual_text = '', -- floating text preview (set to empty to disable)
+        diagnostic_head_severity_1 = '1',
+        diagnostic_head_severity_2 = '2',
+        diagnostic_head_severity_3 = '3',
+        diagnostic_head_description = '', -- suffix for severities
+        diagnostic_virtual_text = '', -- floating text preview (set to empty to disable)
         diagnostic_file = '', -- icon in floating window, indicates the file contains diagnostics
 
         -- Values (floating window)
