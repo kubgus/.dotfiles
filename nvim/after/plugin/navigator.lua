@@ -18,10 +18,10 @@ require("navigator").setup({
 
         -- Diagnostics (gutter)
         diagnostic_head = '',
-        diagnostic_err = '󰰲',
-        diagnostic_warn = '',
-        diagnostic_info = '',
-        diagnostic_hint = '',
+        diagnostic_err = '',
+        diagnostic_warn = '',
+        diagnostic_info = '',
+        diagnostic_hint = '',
 
         -- Diagnostics (floating window)
         diagnostic_head_severity_1 = '󰚑',
