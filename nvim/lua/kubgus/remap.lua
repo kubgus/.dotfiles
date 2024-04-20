@@ -66,3 +66,6 @@ vim.keymap.set("n", "<leader>mdkb", "i<Enter><kbd></kbd><Esc>5hi")
 -- Copilot
 vim.keymap.set("n", "<leader>ce", ":Copilot enable<CR>")
 vim.keymap.set("n", "<leader>cd", ":Copilot disable<CR>")
+
+-- LSP Restart
+vim.keymap.set("n", "<leader>lsp", ":LspRestart<CR>")
