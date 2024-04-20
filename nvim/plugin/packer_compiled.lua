@@ -89,6 +89,11 @@ _G.packer_plugins = {
     path = "/home/kubgus/.local/share/nvim/site/pack/packer/start/copilot.vim",
     url = "https://github.com/github/copilot.vim"
   },
+  ["guihua.lua"] = {
+    loaded = true,
+    path = "/home/kubgus/.local/share/nvim/site/pack/packer/start/guihua.lua",
+    url = "https://github.com/ray-x/guihua.lua"
+  },
   ["lsp-zero.nvim"] = {
     loaded = true,
     path = "/home/kubgus/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
@@ -108,6 +113,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/kubgus/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
+  },
+  ["navigator.lua"] = {
+    loaded = true,
+    path = "/home/kubgus/.local/share/nvim/site/pack/packer/start/navigator.lua",
+    url = "https://github.com/ray-x/navigator.lua"
   },
   ["nvim-cmp"] = {
     loaded = true,
@@ -172,7 +182,7 @@ _G.packer_plugins = {
     url = "https://github.com/bluz71/vim-nightfly-colors"
   },
   ["whitespace.nvim"] = {
-    config = { "\27LJ\2\nü\1\0\0\a\0\f\0\0196\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\2B\0\2\0016\0\6\0009\0\a\0009\0\b\0'\2\t\0'\3\n\0006\4\0\0'\6\1\0B\4\2\0029\4\v\4B\0\4\1K\0\1\0\ttrim\14<Leader>t\6n\bset\vkeymap\bvim\22ignored_filetypes\1\4\0\0\20TelescopePrompt\fTrouble\thelp\1\0\3\18return_cursor\2\14highlight\15DiffDelete\20ignore_terminal\2\nsetup\20whitespace-nvim\frequire\0" },
+    config = { "\27LJ\2\n´\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\2B\0\2\1K\0\1\0\22ignored_filetypes\1\4\0\0\20TelescopePrompt\fTrouble\thelp\1\0\3\20ignore_terminal\2\14highlight\15DiffDelete\18return_cursor\2\nsetup\20whitespace-nvim\frequire\0" },
     loaded = true,
     path = "/home/kubgus/.local/share/nvim/site/pack/packer/start/whitespace.nvim",
     url = "https://github.com/johnfrankmorgan/whitespace.nvim"
@@ -182,7 +192,7 @@ _G.packer_plugins = {
 time([[Defining packer_plugins]], false)
 -- Config for: whitespace.nvim
 time([[Config for whitespace.nvim]], true)
-try_loadstring("\27LJ\2\nü\1\0\0\a\0\f\0\0196\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\2B\0\2\0016\0\6\0009\0\a\0009\0\b\0'\2\t\0'\3\n\0006\4\0\0'\6\1\0B\4\2\0029\4\v\4B\0\4\1K\0\1\0\ttrim\14<Leader>t\6n\bset\vkeymap\bvim\22ignored_filetypes\1\4\0\0\20TelescopePrompt\fTrouble\thelp\1\0\3\18return_cursor\2\14highlight\15DiffDelete\20ignore_terminal\2\nsetup\20whitespace-nvim\frequire\0", "config", "whitespace.nvim")
+try_loadstring("\27LJ\2\n´\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\2B\0\2\1K\0\1\0\22ignored_filetypes\1\4\0\0\20TelescopePrompt\fTrouble\thelp\1\0\3\20ignore_terminal\2\14highlight\15DiffDelete\18return_cursor\2\nsetup\20whitespace-nvim\frequire\0", "config", "whitespace.nvim")
 time([[Config for whitespace.nvim]], false)
 -- Config for: toggleterm.nvim
 time([[Config for toggleterm.nvim]], true)

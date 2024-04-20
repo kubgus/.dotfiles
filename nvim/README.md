@@ -204,3 +204,66 @@ Can be used in *normal mode*.
 <kbd>Space</kbd><kbd>d</kbd> - Same as <kbd>"</kbd><kbd>_</kbd><kbd>d</kbd>
 
 Find more in the `lua/kubgus/remap.lua` file!
+
+### navigator keymaps (copy)
+
+| mode | key             | function                                                   |
+| ---- | --------------- | ---------------------------------------------------------- |
+| n    | gr              | async references, definitions and context                  |
+| n    | \<Leader>gr     | show reference and context                                 |
+| i    | \<m-k\>         | signature help                                             |
+| n    | \<c-k\>         | signature help                                             |
+| n    | gW              | workspace symbol fuzzy finder                              |
+| n    | gD              | declaration                                                |
+| n    | gd              | definition                                                 |
+| n    | gt              | type definition                                            |
+| n    | g0              | document symbol                                            |
+| n    | \<C-]\>         | go to definition (if multiple show listview)               |
+| n    | gp              | definition preview (show Preview)                          |
+| n    | gP              | type definition preview (show Preview)                     |
+| n    | \<C-LeftMouse\> | definition                                                 |
+| n    | g\<LeftMouse\>  | implementation                                             |
+| n    | \<Leader>gt     | treesitter document symbol                                 |
+| n    | \<Leader\>gT    | treesitter symbol for all open buffers                     |
+| n    | \<Leader\> ct   | ctags symbol search                                        |
+| n    | \<Leader\> cg   | ctags symbol generate                                      |
+| n    | K               | hover doc                                                  |
+| n    | \<Space\>ca     | code action (when you see 🏏 )                             |
+| n    | \<Space\>la     | code lens action (when you see a codelens indicator)       |
+| v    | \<Space\>ca     | range code action (when you see 🏏 )                       |
+| n    | \<Space\>rn     | rename with floating window                                |
+| n    | \<Leader\>re    | rename (lsp default)                                       |
+| n    | \<Leader\>gi    | hierarchy incoming calls                                   |
+| n    | \<Leader\>go    | hierarchy outgoing calls                                   |
+| n    | \<Space\>ff     | format buffer (LSP)
+| v    | \<Space\>ff     | format selection range (LSP)
+| n    | gi              | implementation                                             |
+| n    | \<Space\> D     | type definition                                            |
+| n    | gL              | show line diagnostic                                       |
+| n    | gG              | show diagnostic for all buffers                            |
+| n    | ]d              | next diagnostic                                            |
+| n    | [d              | previous diagnostic                                        |
+| n    | \<Leader\> dt   | diagnostic toggle(enable/disable)                          |
+| n    | ]r              | next treesitter reference/usage                            |
+| n    | [r              | previous treesitter reference/usage                        |
+| n    | \<Space\> wa    | add workspace folder                                       |
+| n    | \<Space\> wr    | remove workspace folder                                    |
+| n    | \<Space\> wl    | print workspace folder                                     |
+| n    | \<Leader\>k     | toggle reference highlight                                 |
+| i/n  | \<C-p\>         | previous item in list                                      |
+| i/n  | \<C-n\>         | next item in list                                          |
+| i/n  | number 1~9      | move to ith row/item in the list                           |
+| i/n  | \<Up\>          | previous item in list                                      |
+| i/n  | \<Down\>        | next item in list                                          |
+| n    | \<Ctrl-w\>j     | move cursor to preview (windows move to bottom view point) |
+| n    | \<Ctrl-w\>k     | move cursor to list (windows move to up view point)        |
+| i/n  | \<C-o\>         | open preview file in nvim/Apply action                     |
+| n    | \<C-v\>         | open preview file in nvim with vsplit                      |
+| n    | \<C-s\>         | open preview file in nvim with split                       |
+| n    | \<Enter\>       | open preview file in nvim/Apply action                     |
+| n    | \<ESC\>         | close listview of floating window                          |
+| i/n  | \<C-e\>         | close listview of floating window                          |
+| n    | \<C-q\>         | close listview and send results to quickfix                |
+| i/n  | \<C-b\>         | previous page in listview                                  |
+| i/n  | \<C-f\>         | next page in listview                                      |
+| i/n  | \<C-s\>         | save the modification to preview window to file            |
