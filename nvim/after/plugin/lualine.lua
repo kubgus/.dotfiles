@@ -170,13 +170,22 @@ ins_left {
 -- Add components to right sections
 ins_right {
     'diagnostics',
-    sources = { 'nvim_diagnostic' },
-    symbols = { error = ' ', warn = ' ', info = ' ' },
+    sources = { 'nvim_diagnostic', 'coc' },
+
+    -- Displays diagnostics for the defined severity types
+    sections = { 'error', 'warn', 'info', 'hint' },
+
     diagnostics_color = {
-        color_error = { fg = colors.red },
-        color_warn = { fg = colors.yellow },
-        color_info = { fg = colors.cyan },
+        -- Same values as the general color option can be used here.
+        error = 'DiagnosticError', -- Changes diagnostics' error color.
+        warn  = 'DiagnosticWarn',  -- Changes diagnostics' warn color.
+        info  = 'DiagnosticInfo',  -- Changes diagnostics' info color.
+        hint  = 'DiagnosticHint',  -- Changes diagnostics' hint color.
     },
+    symbols = {error = ' ', warn = ' ', info = ' ', hint = ' '},
+    colored = true,           -- Displays diagnostics status in color if set to true.
+    update_in_insert = false, -- Update diagnostics in insert mode.
+    always_visible = false,   -- Show diagnostics even if there are none
 }
 
 ins_right { 'progress', color = { fg = colors.fg, gui = 'bold' } }
