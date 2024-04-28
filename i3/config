@@ -107,7 +107,7 @@ bindsym $mod+Shift+Return exec i3-sensible-terminal
 bindsym $mod+q kill
 
 # a more modern dmenu replacement is rofi:
-bindsym $mod+a exec "rofi -i -show drun -modi drun -show-icons"
+bindsym $mod+a exec rofi -i -show drun -modi drun -show-icons
 # there also is i3-dmenu-desktop which only displays applications
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
 
