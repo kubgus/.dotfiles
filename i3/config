@@ -9,20 +9,23 @@ set $sm = DP-2
 font pango:DejaVu Sans Mono 11
 
 # second display
-exec --no-startup-id xrandr --auto
-exec --no-startup-id xrandr --output $pm --primary --output $sm --right-of $pm
+exec_always --no-startup-id xrandr --auto
+exec_always --no-startup-id xrandr --output $pm --primary --output $sm --right-of $pm
 
 # some fancy desktop shit
-exec --no-startup-id dex --autostart --environment i3
+exec_always --no-startup-id dex --autostart --environment i3
 
 # network applet
-exec --no-startup-id nm-applet
+exec_always --no-startup-id nm-applet
 
 # launch polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # wallpaper
 exec_always --no-startup-id feh --bg-fill '/usr/share/backgrounds/kali/kali-red-sticker-16x9.jpg'
+
+# hide cursor
+exec_always --no-startup-id unclutter -idle 1 -jitter 5
 
 # window styles
 gaps inner 4
