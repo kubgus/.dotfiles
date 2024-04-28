@@ -9,15 +9,15 @@ git clone --depth 1 https://github.com/kubgus/.dotfiles
 mv .dotfiles/* .
 ```
 
-> ***Note:*** Make sure these folders don't yet exist!
+> ***Note:*** Make sure these folders don't exist already!
 
 ## setting up i3
 
-```bash
-sudo apt-get install i3 dex network-manager nm-applet alacritty feh gromit-mpx
-```
+Verify the needed software is installed and install new software to properly run i3 and this repo's config
 
-> ***Note:*** Install `polybar` and `rofi` separately!
+```bash
+sudo apt-get install i3 xrandr dex nm-applet polybar feh unclutter gromit-mpx xdotool alacritty rofi pactl
+```
 
 ## setting up nvim
 
@@ -37,15 +37,3 @@ After running the above commands, follow these instructions to complete the setu
 1. Navigate to `./lua/kubgus` and open files one by one, running `:so` each time (if you get an error, skip the file and return to it after completing the rest)
 2. Run `:PackerSync` anywhere in the environment
 3. Navigate to `./after/plugin` and run the `:so` command in the same fashion as the previous step
-
-## setting up polybar
-
-```bash
-sudo apt-get install polybar
-```
-
-## setting up rofi
-
-```bash
-sudo apt-get install rofi
-```
