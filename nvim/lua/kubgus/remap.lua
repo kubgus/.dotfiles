@@ -59,6 +59,7 @@ vim.keymap.set("n", "<leader>sarn", ":s/") -- Normal
 -- C++ (almost illegal)
 vim.keymap.set("n", "<leader>cppm", "iint main() {<Enter>}<Esc>O") -- Main
 vim.keymap.set("n", "<leader>cppn", "i#include <iostream><Enter><Enter>int main() {<Enter>}<Esc>O") -- New
+vim.keymap.set("n", "<leader>cpph", "i#pragma once<Enter><Enter>") -- Header file
 
 -- README ease of use
 vim.keymap.set("n", "<leader>mdkb", "i<Enter><kbd></kbd><Esc>5hi")
