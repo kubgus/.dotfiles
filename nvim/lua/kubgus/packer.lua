@@ -14,6 +14,7 @@ return require('packer').startup(function(use)
 
     -- Color theme
     use("bluz71/vim-nightfly-colors")
+    use("rebelot/kanagawa.nvim")
 
     -- Treesitter (code highlighter)
     use {

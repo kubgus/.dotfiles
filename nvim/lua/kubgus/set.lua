@@ -1,5 +1,7 @@
 vim.opt.guicursor = ""
 
+vim.cmd("colorscheme nightfly")
+
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
