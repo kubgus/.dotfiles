@@ -104,71 +104,46 @@ local mode_color = {
 }
 
 ins_left {
-  function()
-    return '▊'
-  end,
-  padding = { left = 0, right = 1 }, -- We don't need space before this
-  color = function()
-    return { fg = mode_color[vim.fn.mode()] }
-  end,
-}
-
-ins_left {
-  -- mode component
-  function()
-    return 'kubgus'
-  end,
-  color = function()
-    return { fg = mode_color[vim.fn.mode()] }
-  end,
-  padding = { right = 1 },
-}
-
-ins_left {
-  -- filesize component
-  'filesize',
-  cond = conditions.buffer_not_empty,
-}
-
-ins_left {
   'filename',
   cond = conditions.buffer_not_empty,
-  color = { fg = colors.fg, gui = 'bold' },
-}
-
-ins_left { 'location' }
-
--- Insert mid section. You can make any number of sections in neovim :)
--- for lualine it's any number greater then 2
-ins_left {
-  function()
-    return '%='
-  end,
+  color = function()
+      return { bg = mode_color[vim.fn.mode()], fg = colors.bg, gui = 'bold'}
+    end,
 }
 
 ins_left {
-  -- Lsp server name .
-  function()
-    local msg = 'none'
-    local buf_ft = vim.api.nvim_buf_get_option(0, 'filetype')
-    local clients = vim.lsp.get_active_clients()
-    if next(clients) == nil then
-      return msg
-    end
-    for _, client in ipairs(clients) do
-      local filetypes = client.config.filetypes
-      if filetypes and vim.fn.index(filetypes, buf_ft) ~= -1 then
-        return client.name
-      end
-    end
-    return msg
-  end,
-  icon = ' ',
-  color = { fg = '#ffffff', gui = 'bold' },
+    function()
+        return ''
+    end,
+    color = function()
+        return { bg = colors.bg, fg = mode_color[vim.fn.mode()], gui = 'bold' }
+    end,
+    cond = conditions.hide_in_width,
+    padding = { left = 0, right = 0 },
 }
 
--- Add components to right sections
-ins_right {
+ins_left {
+    -- Lsp server name .
+    function()
+        local msg = 'none'
+        local buf_ft = vim.api.nvim_buf_get_var(0, 'filetype')
+        local clients = vim.lsp.get_clients()
+        if next(clients) == nil then
+            return msg
+        end
+        for _, client in ipairs(clients) do
+            local filetypes = client.config.filetypes
+            if filetypes and vim.fn.index(filetypes, buf_ft) ~= -1 then
+                return client.name
+            end
+        end
+        return msg
+    end,
+    icon = ' ',
+    color = { fg = '#ffffff', gui = 'bold' },
+}
+
+ins_left {
     'diagnostics',
     sources = { 'nvim_diagnostic', 'coc' },
 
@@ -188,14 +163,48 @@ ins_right {
     always_visible = false,   -- Show diagnostics even if there are none
 }
 
-ins_right { 'progress', color = { fg = colors.fg, gui = 'bold' } }
+-- Insert mid section. You can make any number of sections in neovim :)
+-- for lualine it's any number greater then 2
+ins_left {
+    function()
+        return '%='
+    end,
+}
+
+ins_left {
+    -- Lsp server name .
+    function()
+        local msg = 'none'
+        local buf_ft = vim.api.nvim_buf_get_option(0, 'filetype')
+        local clients = vim.lsp.get_active_clients()
+        if next(clients) == nil then
+            return msg
+        end
+        for _, client in ipairs(clients) do
+            local filetypes = client.config.filetypes
+            if filetypes and vim.fn.index(filetypes, buf_ft) ~= -1 then
+                return client.name
+            end
+        end
+        return msg
+    end,
+    icon = ' ',
+    color = { fg = '#ffffff' },
+}
 
 ins_right {
-  'o:encoding', -- option component same as &encoding in viml
-  fmt = string.upper, -- I'm not sure why it's upper case either ;)
-  cond = conditions.hide_in_width,
-  color = { fg = colors.green, gui = 'bold' },
+    'branch',
+    icon = '',
+    color = { fg = colors.fg, gui = 'bold' },
 }
+
+-- Add components to right sections
+-- ins_right {
+--   'o:encoding', -- option component same as &encoding in viml
+--  fmt = string.upper, -- I'm not sure why it's upper case either ;)
+--  cond = conditions.hide_in_width,
+--  color = { fg = colors.green, gui = 'bold' },
+--}
 
 -- ins_right {
 --  'fileformat',
@@ -204,32 +213,33 @@ ins_right {
 --  color = { fg = colors.green, gui = 'bold' },
 --}
 
-ins_right {
-  'branch',
-  icon = '',
-  color = { fg = colors.violet, gui = 'bold' },
-}
 
 ins_right {
-  'diff',
-  -- Is it me or the symbol for modified us really weird
-  symbols = { added = ' ', modified = '󰝤 ', removed = ' ' },
-  diff_color = {
-    added = { fg = colors.green },
-    modified = { fg = colors.orange },
-    removed = { fg = colors.red },
-  },
-  cond = conditions.hide_in_width,
+    -- filesize component
+    'filesize',
+    cond = conditions.buffer_not_empty,
 }
 
+ins_right { 'progress', color = { gui = 'bold' } }
+
 ins_right {
-  function()
-    return '▊'
-  end,
-  padding = { left = 1 },
-  color = function()
-    return { fg = mode_color[vim.fn.mode()] }
-  end,
+    function()
+        return ''
+    end,
+    color = function()
+        return { bg = colors.bg, fg = mode_color[vim.fn.mode()], gui = 'bold' }
+    end,
+    cond = conditions.hide_in_width,
+    padding = { left = 0, right = 0 },
+}
+
+ins_right { 'location', color = function ()
+    return {
+        bg = mode_color[vim.fn.mode()],
+        fg = colors.bg,
+        gui = 'bold'
+    }
+end,
 }
 
 -- Now don't forget to initialize lualine
