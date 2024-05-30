@@ -21,9 +21,6 @@ exec_always --no-startup-id nm-applet
 # launch polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
-# wallpaper
-exec_always --no-startup-id feh --bg-fill '/usr/share/backgrounds/kali/kali-red-sticker-16x9.jpg'
-
 # hide cursor
 exec_always --no-startup-id unclutter -idle 1 -jitter 5
 
@@ -31,15 +28,6 @@ exec_always --no-startup-id unclutter -idle 1 -jitter 5
 gaps inner 4
 default_border pixel 0
 hide_edge_borders both
-
-# draw on screen
-# f9:        toggle painting
-# shift-f9:  clear screen
-# ctrl-f9:   toggle visibility
-# alt-f9:    quit gromit-mpx
-# f8:       undo last stroke
-# shift-f8: redo last undone stroke
-exec_always --no-startup-id gromit-mpx
 
 #################################################
 # Workspaces
