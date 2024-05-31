@@ -64,9 +64,9 @@ vim.keymap.set("n", "<leader>cpph", "i#pragma once<Enter><Enter>") -- Header fil
 -- README ease of use
 vim.keymap.set("n", "<leader>mdkb", "i<Enter><kbd></kbd><Esc>5hi")
 
--- Copilot
-vim.keymap.set("n", "<leader>ce", ":Copilot enable<CR>")
-vim.keymap.set("n", "<leader>cd", ":Copilot disable<CR>")
+-- Codeium
+vim.keymap.set("n", "<leader>ce", ":Codeium Enable<CR>")
+vim.keymap.set("n", "<leader>cd", ":Codeium Disable<CR>")
 
 -- LSP Restart
 vim.keymap.set("n", "<leader>lsp", ":LspRestart<CR>")
