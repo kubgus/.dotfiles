@@ -64,17 +64,7 @@ return require('packer').startup(function(use)
     }
 
     -- AI Copilot
-    use {
-        "Exafunction/codeium.nvim",
-        requires = {
-            "nvim-lua/plenary.nvim",
-            "hrsh7th/nvim-cmp",
-        },
-        config = function()
-            require("codeium").setup({
-            })
-        end
-    }
+    use("Exafunction/codeium.vim")
 
     -- Error handling
     use("folke/trouble.nvim")

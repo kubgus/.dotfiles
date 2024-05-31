@@ -84,11 +84,10 @@ _G.packer_plugins = {
     path = "/home/kubgus/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
-  ["codeium.nvim"] = {
-    config = { "\27LJ\2\n9\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\fcodeium\frequire\0" },
+  ["codeium.vim"] = {
     loaded = true,
-    path = "/home/kubgus/.local/share/nvim/site/pack/packer/start/codeium.nvim",
-    url = "https://github.com/Exafunction/codeium.nvim"
+    path = "/home/kubgus/.local/share/nvim/site/pack/packer/start/codeium.vim",
+    url = "https://github.com/Exafunction/codeium.vim"
   },
   ["guihua.lua"] = {
     loaded = true,
@@ -188,7 +187,7 @@ _G.packer_plugins = {
     url = "https://github.com/bluz71/vim-nightfly-colors"
   },
   ["whitespace.nvim"] = {
-    config = { "\27LJ\2\n«\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\2B\0\2\1K\0\1\0\22ignored_filetypes\1\4\0\0\20TelescopePrompt\fTrouble\thelp\1\0\4\22ignored_filetypes\0\14highlight\15DiffDelete\20ignore_terminal\2\18return_cursor\2\nsetup\20whitespace-nvim\frequire\0" },
+    config = { "\27LJ\2\n«\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\2B\0\2\1K\0\1\0\22ignored_filetypes\1\4\0\0\20TelescopePrompt\fTrouble\thelp\1\0\4\20ignore_terminal\2\14highlight\15DiffDelete\22ignored_filetypes\0\18return_cursor\2\nsetup\20whitespace-nvim\frequire\0" },
     loaded = true,
     path = "/home/kubgus/.local/share/nvim/site/pack/packer/start/whitespace.nvim",
     url = "https://github.com/johnfrankmorgan/whitespace.nvim"
@@ -200,13 +199,9 @@ time([[Defining packer_plugins]], false)
 time([[Config for toggleterm.nvim]], true)
 try_loadstring("\27LJ\2\nP\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\17open_mapping\bC-\\\nsetup\15toggleterm\frequire\0", "config", "toggleterm.nvim")
 time([[Config for toggleterm.nvim]], false)
--- Config for: codeium.nvim
-time([[Config for codeium.nvim]], true)
-try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\fcodeium\frequire\0", "config", "codeium.nvim")
-time([[Config for codeium.nvim]], false)
 -- Config for: whitespace.nvim
 time([[Config for whitespace.nvim]], true)
-try_loadstring("\27LJ\2\n«\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\2B\0\2\1K\0\1\0\22ignored_filetypes\1\4\0\0\20TelescopePrompt\fTrouble\thelp\1\0\4\22ignored_filetypes\0\14highlight\15DiffDelete\20ignore_terminal\2\18return_cursor\2\nsetup\20whitespace-nvim\frequire\0", "config", "whitespace.nvim")
+try_loadstring("\27LJ\2\n«\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\2B\0\2\1K\0\1\0\22ignored_filetypes\1\4\0\0\20TelescopePrompt\fTrouble\thelp\1\0\4\20ignore_terminal\2\14highlight\15DiffDelete\22ignored_filetypes\0\18return_cursor\2\nsetup\20whitespace-nvim\frequire\0", "config", "whitespace.nvim")
 time([[Config for whitespace.nvim]], false)
 
 _G._packer.inside_compile = false
