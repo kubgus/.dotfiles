@@ -161,8 +161,8 @@ bindsym $mod+r restart
 bindsym $mod+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # power options
-bindsym $mod+w exec "xdg-screensaver lock"
-bindsym $mod+Shift+i exec "systemctl suspend"
+bindsym $mod+w exec "i3lock"
+bindsym $mod+Shift+i exec "i3lock && systemctl suspend"
 bindsym $mod+Shift+o exec "systemctl reboot"
 bindsym $mod+Shift+p exec "systemctl poweroff"
 
