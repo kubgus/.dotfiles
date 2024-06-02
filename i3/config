@@ -89,12 +89,10 @@ bindsym Mod4 exec --no-startup-id xdotool key --clearmodifiers Alt
 
 # start a terminal
 bindsym $mod+Return exec alacritty -o font.size=9
-bindsym Super_L exec alacritty -o font.size=9
 bindsym $mod+Shift+Return exec i3-sensible-terminal
 
 # nightmode
-bindsym $mod+n exec sh $HOME/.config/i3/nightmode.sh $pm $sm
-bindsym $mod+Shift+n exec sh $HOME/.config/i3/daymode.sh $pm $sm
+bindsym Super_L exec sh $HOME/.config/i3/nightmode.sh $pm $sm
 
 # kill focused window
 bindsym $mod+q kill
