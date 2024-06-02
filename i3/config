@@ -89,6 +89,7 @@ bindsym Mod4 exec --no-startup-id xdotool key --clearmodifiers Alt
 
 # start a terminal
 bindsym $mod+Return exec alacritty -o font.size=9
+bindsym Super_L exec alacritty -o font.size=9
 bindsym $mod+Shift+Return exec i3-sensible-terminal
 
 # kill focused window
@@ -98,6 +99,7 @@ bindsym $mod+q kill
 bindsym $mod+a exec rofi -i -show drun -modi drun -show-icons
 # there also is i3-dmenu-desktop which only displays applications
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
+
 
 # screen requirements (orientation)
 # bindsym $mod+o exec xrandr -o normal
