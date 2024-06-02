@@ -92,6 +92,10 @@ bindsym $mod+Return exec alacritty -o font.size=9
 bindsym Super_L exec alacritty -o font.size=9
 bindsym $mod+Shift+Return exec i3-sensible-terminal
 
+# nightmode
+bindsym $mod+n exec "xrandr --output $pm --brightness 0.3; xrandr --output $sm --brightness 0.3; redshift -P -O 3000"
+bindsym $mod+Shift+n exec "xrandr --output $pm --brightness 1; xrandr --output $sm --brightness 1; redshift -P -O 6500"
+
 # kill focused window
 bindsym $mod+q kill
 
