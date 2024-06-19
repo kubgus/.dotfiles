@@ -8,7 +8,6 @@ return require('packer').startup(function(use)
     -- Telescope (fuzzy-finder)
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.5',
-        -- or                            , branch = '0.1.x',
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
 
@@ -52,12 +51,14 @@ return require('packer').startup(function(use)
         "neovim/nvim-lspconfig",
     }
 
+    -- Toggleable terminal
     use { "akinsho/toggleterm.nvim", tag = '*', config = function()
         require("toggleterm").setup {
             open_mapping = [[C-\]]
         }
     end }
 
+    -- Custom status line
     use {
         'nvim-lualine/lualine.nvim',
         requires = { 'nvim-tree/nvim-web-devicons', opt = true }
@@ -66,10 +67,7 @@ return require('packer').startup(function(use)
     -- AI Copilot
     use("Exafunction/codeium.vim")
 
-    -- Error handling
-    use("folke/trouble.nvim")
-
-    -- Whitespace
+    -- Whitespace detection
     use {
         'johnfrankmorgan/whitespace.nvim',
         config = function()
@@ -82,7 +80,7 @@ return require('packer').startup(function(use)
 
                 -- `ignored_filetypes` configures which filetypes to ignore when
                 -- displaying trailing whitespace
-                ignored_filetypes = { 'TelescopePrompt', 'Trouble', 'help' },
+                ignored_filetypes = { 'TelescopePrompt', 'Trouble', 'help', 'terminal' },
 
                 -- `ignore_terminal` configures whether to ignore terminal buffers
                 ignore_terminal = true,
@@ -94,6 +92,7 @@ return require('packer').startup(function(use)
         end
     }
 
+    -- Navigator
     use({
         "ray-x/navigator.lua",
         requires = {
