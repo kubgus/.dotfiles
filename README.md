@@ -13,10 +13,25 @@ mv .dotfiles/* .
 
 ## setting up i3
 
-Verify the needed software is installed and install new software to properly run i3 and this repo's config
-
+List of software:
 ```bash
-sudo apt-get install i3 xrandr dex nm-applet polybar feh unclutter gromit-mpx xdotool alacritty rofi pactl
+i3
+xrandr
+dex
+xss
+lock
+nm
+applet
+polybar
+feh
+unclutter
+gromit
+mpx
+xdotool
+alacritty
+rofi
+pactl
+pavucontrol
 ```
 
 ## setting up nvim
