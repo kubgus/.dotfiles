@@ -9,7 +9,7 @@ set $sm = DP-2
 font pango:DejaVu Sans Mono 11
 
 # second display
-exec_always --no-startup-id xrandr --output $pm --primary --output $sm --right-of $pm
+exec_always --no-startup-id xrandr --output eDP-1 --primary --output DP-1 --right-of eDP-1
 
 # lock on suspend
 exec_always --no-startup-id xss-lock --transfer-sleep-lock -- i3lock -n -c 000000 --nofork
@@ -97,7 +97,10 @@ bindsym Super_L exec sh $HOME/.config/i3/nightmode.sh $pm $sm
 bindsym $mod+q kill
 
 # audio control
-bindsym $mod+semicolon exec --no-startup-id pavucontrol
+bindsym $mod+shift+semicolon exec --no-startup-id pavucontrol
+
+# screenpen
+bindsym $mod+semicolon exec --no-startup-id screenpen
 
 # a more modern dmenu replacement is rofi:
 bindsym $mod+a exec rofi -i -show drun -modi drun -show-icons
@@ -167,7 +170,6 @@ bindsym $mod+r restart
 bindsym $mod+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # power options
-bindsym $mod+w exec "i3lock"
 bindsym $mod+Shift+u exec "systemctl suspend"
 bindsym $mod+Shift+i exec "pkill -u kubgus"
 bindsym $mod+Shift+o exec "systemctl reboot"

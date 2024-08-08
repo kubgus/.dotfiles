@@ -32,6 +32,7 @@ alacritty
 rofi
 pactl
 pavucontrol
+screenpen
 ```
 
 ## setting up nvim

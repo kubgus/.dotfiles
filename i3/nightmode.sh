@@ -1,6 +1,6 @@
 #! /bin/bash
 
-Current=$(xrandr --verbose | grep Brightness | awk '{print $2}')
+Current=$(xrandr --verbose | grep Brightness | awk '{print $2}' | head -1)
 
 if [ "$Current" == "0.50" ]; then
     xrandr --output $1 --brightness 1 --gamma 1.0:1.0:1.0
