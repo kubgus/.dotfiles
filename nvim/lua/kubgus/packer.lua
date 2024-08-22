@@ -17,8 +17,8 @@ return require('packer').startup(function(use)
 
     -- Treesitter (code highlighter)
     use {
-        'nvim-treesitter/nvim-treesitter',
-        { run = ':TSUpdate' }
+        "nvim-treesitter/nvim-treesitter",
+        { run = ":TSUpdate" }
     }
 
     -- Undo tree
@@ -72,22 +72,7 @@ return require('packer').startup(function(use)
         'johnfrankmorgan/whitespace.nvim',
         config = function()
             require('whitespace-nvim').setup({
-                -- configuration options and their defaults
-
-                -- `highlight` configures which highlight is used to display
-                -- trailing whitespace
-                highlight = 'DiffDelete',
-
-                -- `ignored_filetypes` configures which filetypes to ignore when
-                -- displaying trailing whitespace
-                ignored_filetypes = { 'TelescopePrompt', 'Trouble', 'help', 'terminal' },
-
-                -- `ignore_terminal` configures whether to ignore terminal buffers
-                ignore_terminal = true,
-
-                -- `return_cursor` configures if cursor should return to previous
-                -- position after trimming whitespace
-                return_cursor = true,
+                highlight = 'SpellBad',
             })
         end
     }
@@ -100,4 +85,11 @@ return require('packer').startup(function(use)
             { "neovim/nvim-lspconfig" }
         }
     })
+
+    use "nvim-lua/plenary.nvim"
+    use {
+        "ThePrimeagen/harpoon",
+        branch = "harpoon2",
+        requires = { {"nvim-lua/plenary.nvim"} }
+    }
 end)

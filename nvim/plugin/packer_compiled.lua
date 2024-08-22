@@ -94,6 +94,11 @@ _G.packer_plugins = {
     path = "/home/kubgus/.local/share/nvim/site/pack/packer/start/guihua.lua",
     url = "https://github.com/ray-x/guihua.lua"
   },
+  harpoon = {
+    loaded = true,
+    path = "/home/kubgus/.local/share/nvim/site/pack/packer/start/harpoon",
+    url = "https://github.com/ThePrimeagen/harpoon"
+  },
   ["kanagawa.nvim"] = {
     loaded = true,
     path = "/home/kubgus/.local/share/nvim/site/pack/packer/start/kanagawa.nvim",
@@ -182,7 +187,7 @@ _G.packer_plugins = {
     url = "https://github.com/bluz71/vim-nightfly-colors"
   },
   ["whitespace.nvim"] = {
-    config = { "\27LJ\2\n–\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\2B\0\2\1K\0\1\0\22ignored_filetypes\1\5\0\0\20TelescopePrompt\fTrouble\thelp\rterminal\1\0\4\20ignore_terminal\2\22ignored_filetypes\0\18return_cursor\2\14highlight\15DiffDelete\nsetup\20whitespace-nvim\frequire\0" },
+    config = { "\27LJ\2\nW\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\14highlight\rSpellBad\nsetup\20whitespace-nvim\frequire\0" },
     loaded = true,
     path = "/home/kubgus/.local/share/nvim/site/pack/packer/start/whitespace.nvim",
     url = "https://github.com/johnfrankmorgan/whitespace.nvim"
@@ -190,14 +195,14 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: whitespace.nvim
+time([[Config for whitespace.nvim]], true)
+try_loadstring("\27LJ\2\nW\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\14highlight\rSpellBad\nsetup\20whitespace-nvim\frequire\0", "config", "whitespace.nvim")
+time([[Config for whitespace.nvim]], false)
 -- Config for: toggleterm.nvim
 time([[Config for toggleterm.nvim]], true)
 try_loadstring("\27LJ\2\nP\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\17open_mapping\bC-\\\nsetup\15toggleterm\frequire\0", "config", "toggleterm.nvim")
 time([[Config for toggleterm.nvim]], false)
--- Config for: whitespace.nvim
-time([[Config for whitespace.nvim]], true)
-try_loadstring("\27LJ\2\n–\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\2B\0\2\1K\0\1\0\22ignored_filetypes\1\5\0\0\20TelescopePrompt\fTrouble\thelp\rterminal\1\0\4\20ignore_terminal\2\22ignored_filetypes\0\18return_cursor\2\14highlight\15DiffDelete\nsetup\20whitespace-nvim\frequire\0", "config", "whitespace.nvim")
-time([[Config for whitespace.nvim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
