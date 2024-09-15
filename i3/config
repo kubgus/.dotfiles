@@ -17,6 +17,9 @@ exec_always --no-startup-id xss-lock --transfer-sleep-lock -- i3lock -n -c 00000
 # network applet
 exec_always --no-startup-id nm-applet
 
+# blueman applet
+exec_always --no-startup-id blueman-applet
+
 # launch polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 

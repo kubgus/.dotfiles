@@ -20,8 +20,8 @@ xrandr
 dex
 xss
 lock
-nm
-applet
+nm-applet
+blueman
 polybar
 feh
 unclutter
