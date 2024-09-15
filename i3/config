@@ -184,6 +184,7 @@ bindsym $mod+r restart
 bindsym $mod+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # power options
+bindsym $mod+Shift+y exec "i3lock -n -c 000000 --nofork"
 bindsym $mod+Shift+u exec "systemctl suspend"
 bindsym $mod+Shift+i exec "pkill -u kubgus"
 bindsym $mod+Shift+o exec "systemctl reboot"
