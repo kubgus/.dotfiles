@@ -93,6 +93,9 @@ bindsym $mod+Shift+Return exec i3-sensible-terminal
 # nightmode
 bindsym Super_L exec sh $HOME/.config/i3/nightmode.sh $pm $sm
 
+# keyboard layout
+bindsym $mod+Shift+m exec sh $HOME/.config/i3/layout.sh
+
 # kill focused window
 bindsym $mod+q kill
 
