@@ -118,11 +118,19 @@ bindsym $mod+a exec rofi -i -show drun -modi drun -show-icons
 # bindsym $mod+o exec xrandr -o normal
 # bindsym $mod+Shift+o exec xrandr -o right
 
-# use pactl to adjust volume in PulseAudio
 # pulse audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+
+# screen brightness controls
+# bindsym XF86MonBrightnessUp exec $HOME/.config/i3/nightmode.sh $pm $sm
+# bindsym XF86MonBrightnessDown exec $HOME/.config/i3/nightmode.sh $pm $sm
+
+# media player controls
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
 
 # change focus
 bindsym $mod+h focus left
