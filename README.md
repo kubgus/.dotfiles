@@ -30,6 +30,8 @@ mpx
 xdotool
 alacritty
 rofi
+rofi-emoji
+tff-twemoji
 pactl
 pavucontrol
 screenpen

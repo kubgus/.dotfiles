@@ -96,28 +96,6 @@ bindsym $mod+Shift+Return exec i3-sensible-terminal
 # nightmode
 bindsym Super_L exec sh $HOME/.config/i3/nightmode.sh $pm $sm
 
-# keyboard layout
-bindsym $mod+Shift+m exec sh $HOME/.config/i3/layout.sh
-
-# kill focused window
-bindsym $mod+q kill
-
-# audio control
-bindsym $mod+shift+semicolon exec --no-startup-id pavucontrol
-
-# screenpen
-bindsym $mod+semicolon exec --no-startup-id screenpen
-
-# a more modern dmenu replacement is rofi:
-bindsym $mod+a exec rofi -i -show drun -modi drun -show-icons
-# there also is i3-dmenu-desktop which only displays applications
-# bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
-
-
-# screen requirements (orientation)
-# bindsym $mod+o exec xrandr -o normal
-# bindsym $mod+Shift+o exec xrandr -o right
-
 # pulse audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
@@ -131,6 +109,49 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute s
 bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
+
+# screenpen
+bindsym $mod+grave exec --no-startup-id screenpen
+
+# audio control
+bindsym $mod+shift+grave exec --no-startup-id pavucontrol
+
+# kill focused window
+bindsym $mod+q kill
+
+# emoji
+bindsym $mod+w exec --no-startup-id rofi -modi emoji -show emoji
+
+# keyboard layout
+bindsym $mod+Shift+w exec sh $HOME/.config/i3/layout.sh
+
+# exit i3 (logs you out of your X session)
+bindsym $mod+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+
+# reload the configuration file
+# bindsym $mod+Shift+c reload
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+r restart
+
+# power options
+bindsym $mod+Shift+y exec "i3lock -n -c 000000 --nofork"
+bindsym $mod+Shift+u exec "systemctl suspend"
+bindsym $mod+Shift+i exec "pkill -u kubgus"
+bindsym $mod+Shift+o exec "systemctl reboot"
+bindsym $mod+Shift+p exec "systemctl poweroff"
+
+# a more modern dmenu replacement is rofi:
+bindsym $mod+a exec rofi -i -show drun -modi drun -show-icons
+# there also is i3-dmenu-desktop which only displays applications
+# bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
+
+bindsym $mod+s mode "resize"
+
+# enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen toggle
+
+# toggle tiling / floating
+bindsym $mod+Shift+f floating toggle
 
 # change focus
 bindsym $mod+h focus left
@@ -156,12 +177,6 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
-# enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
-
-# toggle tiling / floating
-bindsym $mod+Shift+f floating toggle
-
 # change focus between tiling / floating windows
 # bindsym $mod+m focus mode_toggle
 
@@ -175,20 +190,6 @@ bindsym $mod+Shift+f floating toggle
 
 # focus the child container
 # bindsym $mod+d focus child
-
-# reload the configuration file
-# bindsym $mod+Shift+c reload
-# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+r restart
-# exit i3 (logs you out of your X session)
-bindsym $mod+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
-
-# power options
-bindsym $mod+Shift+y exec "i3lock -n -c 000000 --nofork"
-bindsym $mod+Shift+u exec "systemctl suspend"
-bindsym $mod+Shift+i exec "pkill -u kubgus"
-bindsym $mod+Shift+o exec "systemctl reboot"
-bindsym $mod+Shift+p exec "systemctl poweroff"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -214,8 +215,6 @@ mode "resize" {
         bindsym Escape mode "default"
         bindsym $mod+s mode "default"
 }
-
-bindsym $mod+s mode "resize"
 
 # make the currently focused window a scratchpad
 bindsym $mod+Shift+minus move scratchpad
