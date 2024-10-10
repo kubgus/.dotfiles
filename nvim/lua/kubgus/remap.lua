@@ -6,7 +6,7 @@ vim.g.mapleader = " "
 ------------------------------------------------------
 
 -- Netrw easy access (project-overview)
-vim.keymap.set("n", "<leader>po", vim.cmd.Ex)
+vim.keymap.set("n", "<leader>po", ":NvimTreeToggle<CR>")
 
 -- greatest remap ever
 vim.keymap.set("x", "<leader>pp", [["_dP]])
