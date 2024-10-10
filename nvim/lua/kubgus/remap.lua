@@ -18,6 +18,12 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 -- Append line below to current line
 vim.keymap.set("n", "J", "mzJ`z")
 
+-- Awesomepaste
+vim.keymap.set("n", "<leader>p", "\"0p")
+vim.keymap.set("v", "<leader>p", "\"0p")
+vim.keymap.set("n", "<leader>P", "\"0P")
+vim.keymap.set("v", "<leader>P", "\"0P")
+
 -- Half page jumps keep cursor in middle
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
@@ -30,17 +36,6 @@ vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set("n", "<leader>y", "\"+y")
 vim.keymap.set("v", "<leader>y", "\"+y")
 vim.keymap.set("n", "<leader>Y", "\"+Y")
-
--- Awesomedel
-vim.keymap.set("n", "<leader>d", "\"_d")
-
--- Tabs
-vim.keymap.set("n", "<leader>j", ":tabnext<CR>")
-vim.keymap.set("n", "<leader>k", ":tabnext -<CR>")
-vim.keymap.set("n", "<leader>h", ":tabnext -<CR>")
-vim.keymap.set("n", "<leader>l", ":tabnext +<CR>")
-vim.keymap.set("n", "<leader>n", ":tabnew<CR>")
-vim.keymap.set("n", "<leader>e", ":tabclose<CR>")
 
 -- Search and replace
 vim.keymap.set("n", "<leader>sara", ":%s/") -- All
