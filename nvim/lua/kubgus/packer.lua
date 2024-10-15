@@ -14,12 +14,11 @@ return require('packer').startup(function(use)
     -- Color theme
     use("bluz71/vim-nightfly-colors")
     use("rebelot/kanagawa.nvim")
+    use { "catppuccin/nvim", as = "catppuccin" }
+    use { "tiagovla/tokyodark.nvim", as = "tokyodark" }
 
     -- Treesitter (code highlighter)
-    use {
-        "nvim-treesitter/nvim-treesitter",
-        { run = ":TSUpdate" }
-    }
+    use { 'nvim-treesitter/nvim-treesitter', { run = ":TSUpdate" } }
 
     -- Undo tree
     use("mbbill/undotree")
