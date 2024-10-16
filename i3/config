@@ -94,7 +94,10 @@ bindsym $mod+Return exec alacritty -o font.size=9
 bindsym $mod+Shift+Return exec i3-sensible-terminal
 
 # nightmode
-bindsym Super_L exec sh $HOME/.config/i3/nightmode.sh $pm $sm
+bindsym $mod+n exec sh $HOME/.config/i3/nightmode.sh $pm $sm
+
+# orientation
+bindsym Super_L exec sh $HOME/.config/i3/orientation.sh
 
 # pulse audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
