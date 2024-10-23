@@ -1,6 +1,6 @@
 #!/bin/bash
 
-TOUCHPAD_IDS=(4 13 10 11)
+TOUCHPAD_IDS=(10 11 13 14 17)
 
 # Get current screen orientation
 ORIENTATION=$(xrandr --verbose | grep -m 1 ' connected' | grep -o 'normal\|inverted\|left\|right' | head -1)
