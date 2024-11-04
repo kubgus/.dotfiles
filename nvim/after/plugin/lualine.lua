@@ -160,6 +160,19 @@ ins_left {
     always_visible = false,   -- Show diagnostics even if there are none
 }
 
+ins_left {
+    'diff',
+    colored = true,
+    diff_color = {
+        added = { fg = colors.green },
+        modified = { fg = colors.blue },
+        removed = { fg = colors.red },
+    },
+    symbols = { added = '+', modified = '~', removed = '-' },
+    padding = 1,
+    cond = conditions.hide_in_width,
+}
+
 -- Insert mid section. You can make any number of sections in neovim :)
 -- for lualine it's any number greater then 2
 ins_left {
