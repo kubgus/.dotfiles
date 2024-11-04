@@ -34,6 +34,7 @@ rofi-emoji
 tff-twemoji
 pactl
 pavucontrol
+xmousepasteblock
 screenpen
 ```
 

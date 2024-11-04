@@ -11,20 +11,23 @@ font pango:DejaVu Sans Mono 11
 # second display
 exec_always --no-startup-id xrandr --output $pm --primary --output $sm --right-of $pm
 
+# disable middle mouse paste
+exec --no-startup-id xmousepasteblock
+
 # lock on suspend
-exec_always --no-startup-id xss-lock --transfer-sleep-lock -- i3lock -n -c 000000 --nofork
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock -n -c 000000 --nofork
 
 # network applet
-exec_always --no-startup-id nm-applet
+exec --no-startup-id nm-applet
 
 # blueman applet
-exec_always --no-startup-id blueman-applet
+# exec --no-startup-id blueman-applet
 
 # launch polybar
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec --no-startup-id $HOME/.config/polybar/launch.sh
 
 # hide cursor
-exec_always --no-startup-id unclutter -idle 1 -jitter 5
+exec --no-startup-id unclutter -idle 1 -jitter 5
 
 # window styles
 gaps inner 4
