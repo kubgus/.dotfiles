@@ -7,12 +7,14 @@ require("nvim-tree").setup({
         sorter = "case_sensitive",
     },
     view = {
-        width = 30,
+        width = 48,
         float = {
             enable = true,
             open_win_config = {
                 row = 0,
                 col = 999,
+                width = 48,
+                height = 38,
             },
         },
     },
