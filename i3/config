@@ -8,6 +8,9 @@ set $sm = DP-2
 
 font pango:DejaVu Sans Mono 11
 
+# nightmode
+exec --no-startup-id sh $HOME/.config/i3/nightmode.sh $pm $sm
+
 # second display
 exec_always --no-startup-id xrandr --output $pm --primary --output $sm --right-of $pm
 
