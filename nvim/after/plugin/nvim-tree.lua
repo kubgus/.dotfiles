@@ -3,6 +3,7 @@ require("nvim-tree").setup()
 
 -- OR setup with some options
 require("nvim-tree").setup({
+    hijack_cursor = true,
     sort = {
         sorter = "case_sensitive",
     },
