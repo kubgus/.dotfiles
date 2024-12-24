@@ -33,7 +33,7 @@ exec --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id unclutter -idle 1 -jitter 5
 
 # window styles
-gaps inner 4
+gaps inner 0
 default_border pixel 0
 hide_edge_borders both
 
