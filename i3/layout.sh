@@ -19,3 +19,5 @@ if [[ "$Next" == "sk" ]]; then
 else
     setxkbmap "$Next"
 fi
+
+setxkbmap -option caps:swapescape

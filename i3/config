@@ -14,6 +14,9 @@ exec --no-startup-id sh $HOME/.config/i3/nightmode.sh $pm $sm
 # second display
 exec_always --no-startup-id xrandr --output $pm --primary --output $sm --right-of $pm
 
+# swap caps with esc
+exec_always --no-startup-id setxkbmap -option caps:swapescape
+
 # disable middle mouse paste
 exec --no-startup-id xmousepasteblock
 
@@ -102,8 +105,8 @@ bindsym $mod+Shift+Return exec i3-sensible-terminal
 # nightmode
 bindsym $mod+n exec sh $HOME/.config/i3/nightmode.sh $pm $sm
 
-# orientation
-bindsym Super_L exec sh $HOME/.config/i3/orientation.sh
+# orientation (disabled for now)
+# bindsym Super_L exec sh $HOME/.config/i3/orientation.sh
 
 # pulse audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
