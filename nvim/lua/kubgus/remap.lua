@@ -8,21 +8,18 @@ vim.g.mapleader = " "
 -- Netrw easy access (project-overview)
 vim.keymap.set("n", "<leader>po", ":NvimTreeToggle<CR>")
 
--- greatest remap ever
-vim.keymap.set("x", "<leader>pp", [["_dP]])
-
 -- Visual move
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
-vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 -- Append line below to current line
 vim.keymap.set("n", "J", "mzJ`z")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 -- Awesomepaste
-vim.keymap.set("n", "<leader>p", "\"0p")
-vim.keymap.set("v", "<leader>p", "\"0p")
-vim.keymap.set("n", "<leader>P", "\"0P")
-vim.keymap.set("v", "<leader>P", "\"0P")
+vim.keymap.set("n", "<leader>pp", "\"0p")
+vim.keymap.set("v", "<leader>pp", "\"0p")
+vim.keymap.set("n", "<leader>PP", "\"0P")
+vim.keymap.set("v", "<leader>PP", "\"0P")
 
 -- Half page jumps keep cursor in middle
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
