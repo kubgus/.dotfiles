@@ -47,16 +47,16 @@ hide_edge_borders both
 # Workspaces
 #################################################
 
-workspace 1 output $pm
-workspace 2 output $sm
-workspace 3 output $pm
-workspace 4 output $sm
-workspace 5 output $pm
-workspace 6 output $sm
-workspace 7 output $pm
-workspace 8 output $sm
-workspace 9 output $pm
-workspace 10 output $sm
+#workspace 1 output $pm
+#workspace 2 output $sm
+#workspace 3 output $pm
+#workspace 4 output $sm
+#workspace 5 output $pm
+#workspace 6 output $sm
+#workspace 7 output $pm
+#workspace 8 output $sm
+#workspace 9 output $pm
+#workspace 10 output $sm
 
 # define names for default workspaces for which we configure key bindings later on
 # we use variables to avoid repeating the names in multiple places
