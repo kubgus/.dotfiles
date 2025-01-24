@@ -11,9 +11,6 @@ font pango:DejaVu Sans Mono 11
 # nightmode
 exec --no-startup-id sh $HOME/.config/i3/nightmode.sh $pm $sm
 
-# snipping tool
-exec --no-startup-id flameshot
-
 # second display
 exec_always --no-startup-id xrandr --output $pm --primary --output $sm --right-of $pm
 
@@ -28,6 +25,9 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock -n -c 000000 --nof
 
 # network applet
 exec --no-startup-id nm-applet
+
+# snipping tool
+exec --no-startup-id flameshot
 
 # blueman applet
 # exec --no-startup-id blueman-applet
