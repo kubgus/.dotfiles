@@ -36,6 +36,7 @@ pactl
 pavucontrol
 xmousepasteblock
 screenpen
+flameshot
 ```
 
 ## setting up nvim
