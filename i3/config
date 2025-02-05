@@ -3,16 +3,16 @@ set $mod Mod1
 # use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-set $pm = eDP-1
-set $sm = DP-2
+set $pm = DP-2
+set $sm = eDP-1
 
 font pango:DejaVu Sans Mono 11
 
 # nightmode
 exec --no-startup-id sh $HOME/.config/i3/nightmode.sh $pm $sm
 
-# second display
-exec_always --no-startup-id xrandr --output $pm --primary --output $sm --right-of $pm
+# set bg
+exec --no-startup-id feh --bg-scale /home/kubgus/pictures/wallpapers/mojave.png
 
 # swap caps with esc
 exec_always --no-startup-id setxkbmap -option caps:swapescape
@@ -47,17 +47,6 @@ hide_edge_borders both
 # Workspaces
 #################################################
 
-#workspace 1 output $pm
-#workspace 2 output $sm
-#workspace 3 output $pm
-#workspace 4 output $sm
-#workspace 5 output $pm
-#workspace 6 output $sm
-#workspace 7 output $pm
-#workspace 8 output $sm
-#workspace 9 output $pm
-#workspace 10 output $sm
-
 # define names for default workspaces for which we configure key bindings later on
 # we use variables to avoid repeating the names in multiple places
 set $ws1 "1: dev"
@@ -70,6 +59,17 @@ set $ws7 "7: mail"
 set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
+
+workspace $ws1 output $pm
+workspace $ws2 output $pm
+workspace $ws3 output $pm
+workspace $ws4 output $sm
+workspace $ws5 output $pm
+workspace $ws6 output $sm
+workspace $ws7 output $pm
+workspace $ws8 output $pm
+workspace $ws9 output $sm
+workspace $ws10 output $sm
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
