@@ -8,11 +8,8 @@ set $sm = eDP-1
 
 font pango:DejaVu Sans Mono 11
 
-# nightmode
-exec --no-startup-id sh $HOME/.config/i3/nightmode.sh $pm $sm
-
 # set bg
-exec --no-startup-id feh --bg-scale /home/kubgus/pictures/wallpapers/mojave.png
+exec_always --no-startup-id feh --bg-scale /home/kubgus/pictures/wallpapers/mojave.png
 
 # swap caps with esc
 exec_always --no-startup-id setxkbmap -option caps:swapescape
@@ -106,7 +103,7 @@ bindsym $mod+Return exec alacritty -o font.size=9
 bindsym $mod+Shift+Return exec i3-sensible-terminal
 
 # nightmode
-bindsym $mod+n exec sh $HOME/.config/i3/nightmode.sh $pm $sm
+bindsym $mod+n exec sh $HOME/.config/i3/nightmode.sh $sm $pm
 
 # orientation (disabled for now)
 # bindsym Super_L exec sh $HOME/.config/i3/orientation.sh
