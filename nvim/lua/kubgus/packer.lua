@@ -132,4 +132,7 @@ return require('packer').startup(function(use)
     use "airblade/vim-gitgutter"
 
     use "chrisbra/Colorizer"
+
+    -- dlang
+    use "ncm2/ncm2-d"
 end)

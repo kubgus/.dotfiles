@@ -16,7 +16,7 @@ cmp.setup({
 -- Automatic language server install
 require('mason').setup({})
 require('mason-lspconfig').setup({
-	ensure_installed = { "clangd" },
+	ensure_installed = { "lua_ls", "clangd" },
 	handlers = {
 		lsp.default_setup,
 	}
