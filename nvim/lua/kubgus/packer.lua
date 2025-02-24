@@ -64,7 +64,20 @@ return require('packer').startup(function(use)
     }
 
     -- AI Copilot
-    use("Exafunction/codeium.vim")
+    use {
+        "Exafunction/codeium.nvim",
+        requires = {
+            "nvim-lua/plenary.nvim",
+            "hrsh7th/nvim-cmp",
+        },
+        config = function()
+            require("codeium").setup({
+                virtual_text = {
+                    enabled = false
+                },
+            })
+        end
+    }
 
     -- Whitespace detection
     use {
