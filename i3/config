@@ -96,8 +96,6 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 # Keybindings
 #################################################
 
-bindsym Mod4 exec --no-startup-id xdotool key --clearmodifiers Alt
-
 # start a terminal
 bindsym $mod+Return exec alacritty -o font.size=9
 bindsym $mod+Shift+Return exec i3-sensible-terminal
