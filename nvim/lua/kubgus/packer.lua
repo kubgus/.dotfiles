@@ -84,7 +84,7 @@ return require('packer').startup(function(use)
         'johnfrankmorgan/whitespace.nvim',
         config = function()
             require('whitespace-nvim').setup({
-                highlight = 'SpellBad',
+                highlight = 'SpellLocal',
             })
         end
     }
