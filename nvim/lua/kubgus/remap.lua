@@ -1,10 +1,6 @@
 -- Change leader to space
 vim.g.mapleader = " "
 
-------------------------------------------------------
--- NeoVim Shortcuts
-------------------------------------------------------
-
 -- Netrw easy access (project-overview)
 vim.keymap.set("n", "<leader>po", ":NvimTreeToggle<CR>")
 
@@ -37,7 +33,7 @@ vim.keymap.set("n", "<leader>Y", "\"+Y")
 -- Search and replace
 vim.keymap.set("n", "<leader>sara", ":%s/") -- All
 vim.keymap.set("n", "<leader>sarr", ":+s/") -- Default
-vim.keymap.set("n", "<leader>sarn", ":s/") -- Normal
+vimkeymap.set("n", "<leader>sarn", ":s/") -- Normal
 
 -- C++ (almost illegal)
 vim.keymap.set("n", "<leader>cppm", "iint main() {<Enter>}<Esc>O") -- Main

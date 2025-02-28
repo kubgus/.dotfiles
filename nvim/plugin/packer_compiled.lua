@@ -95,7 +95,6 @@ _G.packer_plugins = {
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
   ["codeium.nvim"] = {
-    config = { "\27LJ\2\nk\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\2B\0\2\1K\0\1\0\17virtual_text\1\0\1\17virtual_text\0\1\0\1\fenabled\1\nsetup\fcodeium\frequire\0" },
     loaded = true,
     path = "/home/kubgus/.local/share/nvim/site/pack/packer/start/codeium.nvim",
     url = "https://github.com/Exafunction/codeium.nvim"
@@ -166,7 +165,6 @@ _G.packer_plugins = {
     url = "https://github.com/nvim-tree/nvim-web-devicons"
   },
   ["obsidian.nvim"] = {
-    config = { "\27LJ\2\n§\1\0\0\5\0\b\0\r6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\0024\3\3\0005\4\6\0>\4\1\3=\3\a\2B\0\2\1K\0\1\0\15workspaces\1\0\2\tpath\25~/documents/obsidian\tname\vsystem\aui\1\0\2\15workspaces\0\aui\0\1\0\1\venable\1\nsetup\robsidian\frequire\0" },
     loaded = true,
     path = "/home/kubgus/.local/share/nvim/site/pack/packer/start/obsidian.nvim",
     url = "https://github.com/epwalsh/obsidian.nvim"
@@ -185,12 +183,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/kubgus/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
-  },
-  ["toggleterm.nvim"] = {
-    config = { "\27LJ\2\nP\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\17open_mapping\bC-\\\nsetup\15toggleterm\frequire\0" },
-    loaded = true,
-    path = "/home/kubgus/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
-    url = "https://github.com/akinsho/toggleterm.nvim"
   },
   tokyodark = {
     loaded = true,
@@ -224,7 +216,6 @@ _G.packer_plugins = {
     url = "https://github.com/bluz71/vim-nightfly-colors"
   },
   ["whitespace.nvim"] = {
-    config = { "\27LJ\2\nY\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\14highlight\15SpellLocal\nsetup\20whitespace-nvim\frequire\0" },
     loaded = true,
     path = "/home/kubgus/.local/share/nvim/site/pack/packer/start/whitespace.nvim",
     url = "https://github.com/johnfrankmorgan/whitespace.nvim"
@@ -232,22 +223,6 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: whitespace.nvim
-time([[Config for whitespace.nvim]], true)
-try_loadstring("\27LJ\2\nY\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\14highlight\15SpellLocal\nsetup\20whitespace-nvim\frequire\0", "config", "whitespace.nvim")
-time([[Config for whitespace.nvim]], false)
--- Config for: toggleterm.nvim
-time([[Config for toggleterm.nvim]], true)
-try_loadstring("\27LJ\2\nP\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\17open_mapping\bC-\\\nsetup\15toggleterm\frequire\0", "config", "toggleterm.nvim")
-time([[Config for toggleterm.nvim]], false)
--- Config for: obsidian.nvim
-time([[Config for obsidian.nvim]], true)
-try_loadstring("\27LJ\2\n§\1\0\0\5\0\b\0\r6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\0024\3\3\0005\4\6\0>\4\1\3=\3\a\2B\0\2\1K\0\1\0\15workspaces\1\0\2\tpath\25~/documents/obsidian\tname\vsystem\aui\1\0\2\15workspaces\0\aui\0\1\0\1\venable\1\nsetup\robsidian\frequire\0", "config", "obsidian.nvim")
-time([[Config for obsidian.nvim]], false)
--- Config for: codeium.nvim
-time([[Config for codeium.nvim]], true)
-try_loadstring("\27LJ\2\nk\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\2B\0\2\1K\0\1\0\17virtual_text\1\0\1\17virtual_text\0\1\0\1\fenabled\1\nsetup\fcodeium\frequire\0", "config", "codeium.nvim")
-time([[Config for codeium.nvim]], false)
 -- Config for: trouble.nvim
 time([[Config for trouble.nvim]], true)
 try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\ftrouble\frequire\0", "config", "trouble.nvim")
