@@ -33,7 +33,7 @@ vim.keymap.set("n", "<leader>Y", "\"+Y")
 -- Search and replace
 vim.keymap.set("n", "<leader>sara", ":%s/") -- All
 vim.keymap.set("n", "<leader>sarr", ":+s/") -- Default
-vimkeymap.set("n", "<leader>sarn", ":s/") -- Normal
+vim.keymap.set("n", "<leader>sarn", ":s/") -- Normal
 
 -- C++ (almost illegal)
 vim.keymap.set("n", "<leader>cppm", "iint main() {<Enter>}<Esc>O") -- Main
