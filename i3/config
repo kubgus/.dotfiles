@@ -51,8 +51,8 @@ set $ws2 "2: web"
 set $ws3 "3: note"
 set $ws4 "4: misc"
 set $ws5 "5: chat"
-set $ws6 "6: music"
-set $ws7 "7: mail"
+set $ws6 "6: mail"
+set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
@@ -61,7 +61,7 @@ workspace $ws1 output $pm
 workspace $ws2 output $pm
 workspace $ws3 output $pm
 workspace $ws4 output $sm
-workspace $ws5 output $pm
+workspace $ws5 output $sm
 workspace $ws6 output $sm
 workspace $ws7 output $pm
 workspace $ws8 output $pm
